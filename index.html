@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Menu com CSS</title>
+        <title>Cadastro</title>
         <meta charset="iso-8859-1">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -8,127 +8,60 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </head>
     <body>
-        <nav class="navbar navbar-default">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="#">AEP MENU CLICAVEL - VISITANTES</a>
-                </div>
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="#">Listar Visitantes</a></li>
-                    <li><a href="#">Cadastrar Visitantes</a></li>
-                    <li><a href="#">Alterar Visitantes</a></li>
-                    <li><a href="#">Excluir visitantes</a></li>
-                </ul>
-            </div>      
-        </nav>
-
-        <!-- Pagina Principal LISTAR VISITANTES-->
+		<nav class="navbar navbar-inverse">
+		  <div class="container-fluid">
+			<div class="navbar-header">
+			  <a class="navbar-brand" href="#">AEP 2 - Programação</a>
+			</div>
+			<ul class="nav navbar-nav">
+			  <li><a href="#">Home</a></li>
+			  <li class="active"><a href="#">Cadastrar Visitante</a></li>
+			  <li><a href="#">Listar Visitantes</a></li>
+			</ul>
+		  </div>
+		</nav>
+        <!-- CADASTRO DE VISITANTE-->
         <div class="container">
-                <div class="jumbotron">
+                <div class="row">
                 <center>
-                <h3>Visitantes Cadastrados</h3> 
-                </center>
+				
+					<h2>
+						Cadastrar Visitante
+					</h2><hr>
+					
+					<div style='color:red'>* Campos obrigatórios</div>
+				</center>
+				<hr>
+				
                 </div>
-                <table class="table table-striped">
-                        <thead>
-                          <tr>
-                            <th>Nome</th>
-                            <th>RG</th>
-                            <th>CPF</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>João Pedro</td>
-                            <td>123.45.789</td>
-                            <td>147.258.369-01</td>
-                          </tr>
-                          <tr>
-                            <td>Maria Rosario</td>
-                            <td>852.987.147</td>
-                            <td>854.123.789-20</td>
-                          </tr>
-                          <tr>
-                            <td>Julio Marcos</td>
-                            <td>852.963.741</td>
-                            <td>852.364.741-87</td>
-                          </tr>
-                        </tbody>  
-            </table>
+				
+				
+                <form class="form-horizontal">
+					  <div class="form-group">
+						<label class="control-label col-sm-4" for="email">Nome: </label>
+						<div class="col-sm-5">
+						  <input type="text" class="form-control" id="nome" placeholder="Nome" required>
+						</div>
+					  </div>
+					  <div class="form-group">
+						<label class="control-label col-sm-4" for="pwd">CPF: </label>
+						<div class="col-sm-5"> 
+						  <input type="cpf" class="form-control" id="cpf" placeholder="CPF" required>
+						</div>
+					  </div>
+					  <div class="form-group">
+						<label class="control-label col-sm-4" for="pwd">Telefone: </label>
+						<div class="col-sm-5"> 
+						  <input type="telefone" class="form-control" id="telefone" placeholder="Telefone" required>
+						</div>
+					  </div>
+					  <div class="form-group"> 
+						<div class="col-sm-offset-4 col-sm-10">
+						  <button type="submit" class="btn btn-default">Cadastrar</button>
+						</div>
+					  </div>
+				</form>
         </div>
 
-
-        <!-- Pagina CADASTRAR VISITANTES-->
-        <div class="container">
-                <div class="jumbotron">
-                <center>
-                <h3>Cadastrar Visitante</h3> 
-                </center>
-                </div>
-                <form >
-                    <div class="form-group">
-                      <label for="nome">Nome:</label>
-                      <input type="text" class="form-control" id="nome" placeholder="Nome Visitante" name="nome" required>
-                    </div>
-                    <div class="form-group">
-                      <label for="rg">RG:</label>
-                      <input type="text" class="form-control" id="rg" placeholder="RG Visitante" name="rg" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="cpf">CPF:</label>
-                        <input type="text" class="form-control" name="cpf" required>
-                    </div>
-                    <button type="submit" class="btn btn-default">Gravar</button>
-                </form>
-        </div>
-
-        <!-- Pagina excluir VISITANTES-->
-        <div class="container">
-                <div class="jumbotron">
-                <center>
-                <h3>Excluir Visitante</h3> 
-                </center>
-                </div>
-                <form >
-                    <div class="form-group">
-                      <label for="nome">Nome:</label>
-                      <input type="text" class="form-control" id="nome" placeholder="Nome Visitante" name="nome">
-                    </div>
-                    <div class="form-group">
-                      <label for="rg">RG:</label>
-                      <input type="text" class="form-control" id="rg" placeholder="RG Visitante" name="rg">
-                    </div>
-                    <div class="form-group">
-                        <label for="cpf">CPF:</label>
-                        <input type="text" class="form-control" name="cpf">
-                    </div>
-                    <button type="submit" class="btn btn-default">Gravar</button>
-                </form>
-        </div>
-
-        <!-- Pagina aLTERAR VISITANTES-->
-        <div class="container">
-                <div class="jumbotron">
-                <center>
-                <h3>Alterar Visitante</h3> 
-                </center>
-                </div>
-                <form >
-                    <div class="form-group">
-                      <label for="nome">Nome:</label>
-                      <input type="text" class="form-control" id="nome" placeholder="Nome Visitante" name="nome">
-                    </div>
-                    <div class="form-group">
-                      <label for="rg">RG:</label>
-                      <input type="text" class="form-control" id="rg" placeholder="RG Visitante" name="rg">
-                    </div>
-                    <div class="form-group">
-                        <label for="cpf">CPF:</label>
-                        <input type="text" class="form-control" name="cpf">
-                    </div>
-                    <button type="submit" class="btn btn-default">Gravar</button>
-                </form>
-        </div>
     </body>
 </html>
